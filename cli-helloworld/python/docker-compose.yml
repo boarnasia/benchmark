@@ -1,0 +1,23 @@
+services:
+  bench:
+    build: .
+    container_name: bench
+    working_dir: /work
+    # # 計測の再現性向上のための例（任意）
+    # cpuset: "0"          # CPU コア固定
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: "1.0"
+    #       memory: 1g
+    # memswap_limit: 1g
+    # pids_limit: 256
+    #read_only: true
+    #security_opt:
+    #  - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=256m
+    volumes:
+      - ../results:/results
+    environment:
+      - NODE_ENV=production

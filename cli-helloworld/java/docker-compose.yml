@@ -1,0 +1,10 @@
+services:
+  bench:
+    build:
+      context: .
+    container_name: bench
+    working_dir: /work
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=256m
+    volumes:
+      - ../results:/results
