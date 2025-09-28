@@ -1,0 +1,4 @@
+Django
+django-ninja
+gunicorn
+uvicorn[standard]

@@ -1,0 +1,21 @@
+services:
+  php:
+    build:
+      dockerfile: Dockerfile.phpfpm
+    cpus: "1.0"             # 1 vCPU に制限
+    mem_limit: "1024m"      # コンテナの物理メモリ上限
+    memswap_limit: "1024m"  # スワップ禁止（= mem_limit と同じにする）
+    restart: unless-stopped
+    command: ["php-fpm"]
+
+  nginx:
+    build:
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "8000:80"
+    depends_on:
+      - php
+    restart: unless-stopped
+
+volumes:
+  mysql_data:

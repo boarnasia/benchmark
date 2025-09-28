@@ -1,0 +1,32 @@
+server:
+  port: ${APP_PORT:8000}
+  shutdown: graceful
+  tomcat:
+    threads:
+      max: 200
+      min-spare: 10
+    connection-timeout: 10s
+    max-connections: 8192
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 5s
+  jackson:
+    default-property-inclusion: non_null
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when-authorized
+
+logging:
+  level:
+    com.example.benchmarkapi: INFO
+    org.springframework.web: WARN
+    org.apache.tomcat: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

@@ -1,0 +1,9 @@
+Running 1m test @ http://localhost:8000/cpu-bound
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   803.38ms  597.08ms   2.00s    55.88%
+    Req/Sec    27.77     23.19   150.00     81.79%
+  5022 requests in 1.02m, 5.34MB read
+  Socket errors: connect 0, read 0, write 0, timeout 886
+Requests/sec:     82.01
+Transfer/sec:     89.38KB

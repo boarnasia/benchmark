@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cpus: "1.0"             # 1 vCPU に制限
+    mem_limit: "1024m"      # コンテナの物理メモリ上限
+    memswap_limit: "1024m"  # スワップ禁止（= mem_limit と同じにする）
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

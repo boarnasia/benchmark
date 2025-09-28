@@ -1,0 +1,13 @@
+services:
+  php:
+    build:
+      context: .
+    cpus: "1.0"             # 1 vCPU に制限
+    mem_limit: "1024m"      # コンテナの物理メモリ上限
+    memswap_limit: "1024m"  # スワップ禁止（= mem_limit と同じにする）
+    ports:
+      - "8000:8000"         # Octaneが直接ポートを公開
+    environment:
+      # Octane/Swoole設定
+      OCTANE_SERVER: swoole
+    restart: unless-stopped

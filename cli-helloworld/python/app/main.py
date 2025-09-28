@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import click
-import resource  # Unix 系OSで利用可能
 
 @click.command()
 def hello():

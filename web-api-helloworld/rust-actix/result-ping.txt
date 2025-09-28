@@ -1,0 +1,8 @@
+Running 1m test @ http://localhost:8000/ping
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.36ms  584.62us  15.52ms   96.25%
+    Req/Sec    18.75k     1.47k   22.36k    74.12%
+  4478351 requests in 1.00m, 538.13MB read
+Requests/sec:  74530.59
+Transfer/sec:      8.96MB

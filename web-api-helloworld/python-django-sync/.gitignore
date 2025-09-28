@@ -1,0 +1,12 @@
+.venv
+.vscode
+
+# ptyhon
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# benchmark
+result.txt

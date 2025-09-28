@@ -10,5 +10,5 @@ git clone git@github.com:boarnasia/benchmark.git
 cd benchmark/cli-helloworld
 make build
 make run
-cat results.csv
+cat results/java_hf.csv
 ```

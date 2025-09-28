@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cpus: "1.0"        # 1 vCPU に制限
+    mem_limit: "1024m"
+    memswap_limit: "1024m"
+    ports:
+      - "8000:8000"
+    #volumes:
+    #  - ./server.py:/app/server.py
+    #command: [ "gunicorn", "-c", "gunicorn_config.py", "app.main:app" ]
+    restart: unless-stopped
