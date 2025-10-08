@@ -25,7 +25,7 @@ async fn cpu_bound() -> impl Responder {
 
 async fn io_bound() -> impl Responder {
     // 100ms の I/O 待ちを模擬
-    actix_web::rt::time::sleep(Duration::from_millis(100)).await;
+    actix_web::rt::time::sleep(Duration::from_millis(20)).await;
     HttpResponse::Ok().json(Msg { message: "IO Bound" })
 }
 

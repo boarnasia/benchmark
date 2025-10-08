@@ -26,7 +26,7 @@ public class BenchmarkController {
     @GetMapping("/io-bound")
     public ResponseEntity<Map<String, String>> ioBound() throws InterruptedException {
         // Simulate IO-bound operation with sleep
-        Thread.sleep(100);
+        Thread.sleep(20);
         return ResponseEntity.ok(Map.of("message", "IO Bound"));
     }
 }

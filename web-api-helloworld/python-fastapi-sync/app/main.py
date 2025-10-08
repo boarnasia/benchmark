@@ -20,6 +20,6 @@ def cpu_bound():
 
 @app.get('/io-bound') 
 def io_bound():
-    time.sleep(0.1)
+    time.sleep(0.02)
     return {"message": "IO Bound"}
 

@@ -12,5 +12,5 @@ def cpu_bound(request):
     return JsonResponse({"message": "CPU Bound"})
 
 def io_bound(request):
-    time.sleep(0.1)
+    time.sleep(0.02)
     return JsonResponse({"message": "IO Bound"})

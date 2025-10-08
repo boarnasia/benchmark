@@ -12,5 +12,5 @@ async def cpu_bound(request):
     return JsonResponse({"message": "CPU Bound"})
 
 async def io_bound(request):
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.02)
     return JsonResponse({"message": "IO Bound"})

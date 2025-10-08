@@ -19,5 +19,5 @@ def cpu_bound(request):
 
 @router.get('/io-bound') 
 async def io_bound(request):
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.02)
     return {"message": "IO Bound"}

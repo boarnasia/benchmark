@@ -1,8 +1,9 @@
 Running 1m test @ http://localhost:8000/io-bound
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   101.51ms  447.72us 103.31ms   68.23%
-    Req/Sec   247.26     14.74   252.00     93.56%
-  59028 requests in 1.00m, 7.32MB read
-Requests/sec:    983.04
-Transfer/sec:    124.80KB
+    Latency   101.44ms  432.24us 102.97ms   68.12%
+    Req/Sec   246.76     19.08   252.00     95.71%
+  59104 requests in 1.12m, 7.33MB read
+  Socket errors: connect 0, read 0, write 0, timeout 200
+Requests/sec:    879.20
+Transfer/sec:    111.62KB

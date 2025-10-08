@@ -20,6 +20,6 @@ async def cpu_bound():
 
 @app.get('/io-bound') 
 async def io_bound():
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.02)
     return {"message": "IO Bound"}
 

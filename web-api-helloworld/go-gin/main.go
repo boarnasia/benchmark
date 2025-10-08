@@ -46,7 +46,7 @@ func main() {
 
 	router.GET("/io-bound", func(c *gin.Context) {
 		// Simulate IO-bound operation with sleep
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(20 * time.Millisecond)
 		c.JSON(http.StatusOK, gin.H{
 			"message": "IO Bound",
 		})
